@@ -1,0 +1,10 @@
+- Deux possibilités: Demander des suggestions (ce sera fait grâce à la liste des ingrédients) - Cherche une recette
+- Forms va bien servir: pour l'enregistrement des utilisateurs (Noms,password,email,chambre, etc??) mais aussi pour la base de données des ingrédients de chacun
+- Ne pas oublier qu'on ne pourra JAMAIS atteindre la liste précise des ingrédients pour une recette, fixer un seuil d'ingrédients mini pour choisir telle ou telle recette.
+- Utiliser Bootstrap Grid pour le Layout de la page
+- Chercher dans "registration" comment incorporer "room"
+- Pour l'adaptabilité de la vidéo => Utiliser du JS (limitation)
+- Pour avoir accès à des infos utilisateurs (exemple: ingrédients, noms, chambre, etc) utiliser QuerySet!!
+- LOGIN_REDIRECT_URL = '/dashbord'
+- PB: min-height: 1000px marche pas ...
+- PB: attention à l'encodage "exp Easy Shepherd&#8217;s Pie" (apostrophe)

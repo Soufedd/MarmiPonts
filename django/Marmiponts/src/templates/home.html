@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block head_title %} Welcome | {{ block.super }} {% endblock %}
+
+<style>
+{% block style %}
+/*.jumbotron{
+}
+*/
+{% endblock %}
+</style>
+
+{% block jumbotron %}
+<!-- Main component for a primary marketing message or call to action -->
+  <div class="jumbotron">
+  <div class="container">
+  <div class="row">
+  <div class='col-sm-7'>
+    <h1>MarmiPonts</h1>
+    <p>Hello there! Join Marmiponts, the first website made by ENPC students to meet and have a friendly meal with you best pals!</p>
+    <p>Sign Up now, make up your ingredient lists and search your favorite recipe. </p>
+    <p>
+      <a class="btn btn-lg btn-primary" href="{% url 'registration_register'%}" role="button">Sign Up &raquo;</a>
+    </p>
+  </div>
+  <div class='col-sm-5'>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Px3-rschmNc" frameborder="0" allowfullscreen></iframe>
+  </div>
+  </div>
+  </div>
+  </div>
+{% endblock %}
+
+{% block content%}
+<div class="row">
+  <div class='col-xs-3'>
+    <p class='lead text-align-center'><a href={{F2FURL1}}> {{ Title1 }}  </p>
+    <img src= {{ImgURL1}} class='img-responsive' /></a>
+  </div>
+  <div class='col-xs-3'>
+    <p class='lead text-align-center'> <a href={{F2FURL2}}> {{ Title2 }}  </p>
+    <img src= {{ImgURL2}} class='img-responsive' /></a>
+  </div>
+  <div class='col-xs-3'>
+    <p class='lead text-align-center'> <a href={{F2FURL3}}> {{ Title3 }}  </p>
+    <img src= {{ImgURL3}} class='img-responsive' /></a>
+  </div>
+  <div class="col-xs-3 pull-right">
+    <p class='lead text-align-center'> <a href={{F2FURL4}}> {{ Title4 }}  </p>
+    <img src= {{ImgURL4}} class='img-responsive' /></a>
+    </div>
+</div>
+
+{% endblock %}
