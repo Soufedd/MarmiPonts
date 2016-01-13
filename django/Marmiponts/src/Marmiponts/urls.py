@@ -9,8 +9,13 @@ urlpatterns = [
 	url(r'^contact/$', 'Home.views.contact', name='contact'),
 
 	url(r'^dashboard/$', 'Core.views.dashboard', name='dashboard'),
+	url(r'^search/$', 'Core.views.search', name='search'),
 	url(r'^personalinfo/$','Core.views.personalinfo', name='personalinfo'),
 	url(r'^ingredients/$','Core.views.ingredients', name='ingredients'),
+
+	url(r'^forum/$', 'forum.views.forum_dir'),
+    url(r'^forum/(?P<forum_id>\d+)/$', 'forum.views.thread_dir'),
+    url(r'^thread/(?P<thread_id>\d+)/$', 'forum.views.post_dir'),
 	
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration.backends.default.urls')),

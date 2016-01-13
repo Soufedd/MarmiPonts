@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{%block content%}
+<p><a href="/forum/"> Retour a la liste des forums </a> </p>
+
+<p><a href="/forum/{{ thread_info.forum.id }}"> Retour a la liste des threads </a> </p>
+
+<p><h1>Thread : {{ thread_info.title }} </h1></p>
+
+<p>{{ thread_info.content }}
+{{ thread_info.pub_date }}
+</p>
+
+{% if post_list %}
+{% for POST in post_list %}
+        <p>{{ POST.content }} {{ POST.pub_date }} </p>
+    {% endfor %}
+{% else %}
+    <p>Aucune reponse</p>
+{% endif %}
+
+<form action="/thread/{{ thread_info.id }}/" method="post">
+{% csrf_token %}
+{{ form|crispy }}
+<input type="submit" value="Submit" />
+</form>
+
+{%endblock%}

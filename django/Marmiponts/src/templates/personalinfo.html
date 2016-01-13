@@ -1,1 +1,38 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+{% if request.user.is_authenticated %}
+
+	{% if Information_list %}
+		{% for POST in Information_list %}
+	        <p>{{ POST.Last_name }} {{ POST.First_name }} </p>
+	   
+	    {% endfor %}
+	{% else %}
+	    
+		
+
+
+		
+
+		<form action="" method="post">
+			<div class='row'>
+				<div class='col-sm-6 col-sm-offset-3'>
+					<h2> Personal Information: {{user}} </h2>
+		    {% csrf_token %}
+		    {{ form|crispy}}
+		    <br>
+		    <input class= 'btn btn-primary btn-block' type="submit" value="Edit" />
+		    <br>
+		    <p class='lead text-align-center'><a href={% url 'dashboard'%}>{{textedit}} </a></p>
+		    </div>
+		</form>
+
+	{% endif %}
+{% elif not request.user.is_authenticated%}
+{% elif not request.user.is_authenticated %}
+<h1> Please Login </h1>
+{% endif %}
+{% endblock %}

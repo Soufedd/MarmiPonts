@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{%block content%}
+
+{% if forum_list %}
+    <ul>
+{% for Forum in forum_list %}
+    <li><a href="/forum/{{ Forum.id }}/">{{ Forum.title }}</a></li>
+{% endfor %}
+    </ul>
+{% else %}
+    <p>Aucun forum disponible !</p>
+{% endif %}
+
+{%endblock%}

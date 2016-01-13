@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'registration',
     #Custom Apps
     'Home',
+    'Core',
+    'forum',
 
 ]
 

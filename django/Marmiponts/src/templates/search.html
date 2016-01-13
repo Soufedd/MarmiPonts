@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block head_title%} Search | {{block.super}}{%endblock%}
+
+{%block content%}
+{% if request.user.is_authenticated %}
+  {% if not search_recipe %}
+  <div class='row'>
+  	<div class='col-sm-6 col-sm-offset-3'>
+  		<form  method="POST" action="">
+  			<h1>  Search Recipe </h1>
+  			{% csrf_token %}
+  			{{form|crispy}}
+  			<input class='btn  btn-block btn-primary' type="submit" value="Search"/>
+  		</form>
+  		
+  	</div>
+  </div>
+  {%endif%}
+
+  {% if search_recipe %}
+  {% if count > 0 %}
+    <h1> You searched for: {{ search_recipe }} </h1>
+    <br> <br>
+    <div class="row">
+      <div class='col-xs-5'>
+      	<a href={{F2FURL1}}>
+        <img src= {{ImgURL1}} class='img-responsive' /></a>
+      </div>
+      <div class='col-xs-7'>
+      	<h1> {{ Title1 }}  </h1>
+        <h2> Ingredients: </h2>
+        {% for ing in Ingr1 %}
+        <p class='lead'> {{ing}}  </p>
+        {% endfor %}
+        <h2> Directions: <a href={{SrcURL1}} target="_blank"> Click Here ! </a></h2>
+      </div>
+    </div>
+    {% if count > 1 %}
+          <br> <br>
+          <div class="row">
+            <div class='col-xs-5'>
+              <a href={{F2FURL2}}>
+              <img src= {{ImgURL2}} class='img-responsive' /></a>
+            </div>
+            <div class='col-xs-7'>
+              <h1> {{ Title2 }}  </h1>
+              <h2> Ingredients: </h2>
+              {% for ing in Ingr2 %}
+              <p class='lead'> {{ing}}  </p>
+              {% endfor %}
+              <h2> Directions: <a href={{SrcURL3}} target="_blank"> Click Here ! </a></h2>
+            </div>
+  
+    {% if count > 2 %}
+    </div>
+    <br> <br>
+    <div class="row">
+      <div class='col-xs-5'>
+        <a href={{F2FURL3}}>
+        <img src= {{ImgURL3}} class='img-responsive' /></a>
+      </div>
+      <div class='col-xs-7'>
+        <h1> {{ Title3 }}  </h1>
+        <h2> Ingredients: </h2>
+        {% for ing in Ingr3 %}
+        <p class='lead'> {{ing}}  </p>
+        {% endfor %}
+        <h2> Directions: <a href={{SrcURL3}} target="_blank"> Click Here ! </a></h2>
+      </div>
+    </div>
+    
+    {% if count > 3 %}
+    <br> <br>
+    <div class="row">
+      <div class='col-xs-5'>
+        <a href={{F2FURL4}}>
+        <img src= {{ImgURL4}} class='img-responsive' /></a>
+      </div>
+      <div class='col-xs-7'>
+        <h1> {{ Title4 }}  </h1>
+        <h2> Ingredients: </h2>
+        {% for ing in Ingr4 %}
+        <p class='lead'> {{ing}}  </p>
+        {% endfor %}
+        <h2> Directions: <a href={{SrcURL4}} target="_blank"> Click Here ! </a></h2>
+      </div>
+    </div>
+    
+    {% if count > 4 %}
+     <br> <br>
+    <div class="row">
+      <div class='col-xs-5'>
+        <a href={{F2FURL5}}>
+        <img src= {{ImgURL5}} class='img-responsive' /></a>
+      </div>
+      <div class='col-xs-7'>
+        <h1> {{ Title5 }}  </h1>
+        <h2> Ingredients: </h2>
+        {% for ing in Ingr5 %}
+        <p class='lead'> {{ing}}  </p>
+        {% endfor %}
+        <h2> Directions: <a href={{SrcURL5}} target="_blank"> Click Here ! </a></h2>
+      </div>
+    </div>
+    
+    {% if count > 5 %}
+    <br> <br>
+    <div class="row">
+      <div class='col-xs-5'>
+        <a href={{F2FURL6}}>
+        <img src= {{ImgURL6}} class='img-responsive' /></a>
+      </div>
+      <div class='col-xs-7'>
+        <h1> {{ Title6 }}  </h1>
+        <h2> Ingredients: </h2>
+        {% for ing in Ingr6 %}
+        <p class='lead'> {{ing}}  </p>
+        {% endfor %}
+        <h2> Directions: <a href={{SrcURL6}} target="_blank"> Click Here ! </a></h2>
+      </div>
+    </div>
+    
+    {% if count > 6 %}
+    <br> <br>
+    <div class="row">
+      <div class='col-xs-5'>
+        <a href={{F2FURL7}}>
+        <img src= {{ImgURL7}} class='img-responsive' /></a>
+      </div>
+      <div class='col-xs-7'>
+        <h1> {{ Title7 }}  </h1>
+        <h2> Ingredients: </h2>
+        {% for ing in Ingr7 %}
+        <p class='lead'> {{ing}}  </p>
+        {% endfor %}
+        <h2> Directions: <a href={{SrcURL7}} target="_blank"> Click Here ! </a></h2>
+      </div>
+    </div>
+    
+    {% if count > 7 %}
+    <br> <br>
+    <div class="row">
+      <div class='col-xs-5'>
+        <a href={{F2FURL8}}>
+        <img src= {{ImgURL8}} class='img-responsive' /></a>
+      </div>
+      <div class='col-xs-7'>
+        <h1> {{ Title8 }}  </h1>
+        <h2> Ingredients: </h2>
+        {% for ing in Ingr8 %}
+        <p class='lead'> {{ing}}  </p>
+        {% endfor %}
+        <h2> Directions: <a href={{SrcURL8}} target="_blank"> Click Here ! </a></h2>
+      </div>
+    </div>
+    {% endif %}
+    {% endif %}
+    {% endif %}
+    {% endif %}
+    {% endif %}
+    {% endif %}
+    {% endif %}
+{% elif count == 0 %}
+<h1> No Result for: '{{search_recipe}}' </h1>
+{% endif %}
+
+  {% endif %}
+{% elif not request.user.is_authenticated %}
+<h1> Please Login </h1>
+{% endif %}
+
+{%endblock%}

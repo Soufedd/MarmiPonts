@@ -1,1 +1,44 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+{% block head_title%} Dashboard | {{block.super}}{%endblock%}
+
+
+{%block content%}
+{% if request.user.is_authenticated %}
+<h1 class=' text-align-center'>  Welcome to your Dashboard {{user}} </h1>
+<br> <br>
+<div class='row'>
+	<div class='col-sm-8 col-sm-offset-2'>
+			<form action="{% url 'search'%}" method="GET">
+			
+			<input class='btn  btn-success btn-block btn-lg' type="submit" value="Search Recipe"/>
+			</form>
+		
+	</div>
+</div>
+<br> <br>
+{% if info %}
+<div class='row'>
+	<div class='col-sm-6 col-sm-offset-3'>
+	<p class='lead text-align-center'> Personal Information </p>
+<table class='table'>
+		<tr><td class='text-align-center'> Full Name 	</td><td class='text-align-center'>{{info.First_name}} {{info.Last_name}}</td></tr>
+		<tr><td class='text-align-center'> Department </td><td class='text-align-center'>{{info.Departement}}</td></tr>
+		<tr><td class='text-align-center'> Room Number </td><td class='text-align-center'>{{info.Room_number}}</td></tr>
+		<tr><td class='text-align-center'> Cell Number </td><td class='text-align-center'>{{info.Telephone_number}}</td></tr>
+</table>
+</div>
+</div>
+{% endif %}
+<h3 class='text-align-center'> {{textinfo}} </h3>
+<div class='row'>
+	<div class='col-sm-8 col-sm-offset-2'>
+			<form action="{% url 'personalinfo'%}" method="GET">
+			<input class='btn  btn-success btn-block' type="submit" value="Edit Your Personal Informations"/>
+			</form>
+	</div>
+</div>
+{% elif not request.user.is_authenticated %}
+<h1> Please Login </h1>
+{% endif %}
+{%endblock%}

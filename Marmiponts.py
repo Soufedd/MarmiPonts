@@ -27,14 +27,14 @@ def f2f_search_getrecipe(query,rank):
         ListImgURL= ListImgURL + [item['image_url']]
     return [ListTitles,ListImgURL]
      
-#     final_url_get_recipe = url_get_recipe + '&rId=' + ListId[rank]
-#     print(final_url_get_recipe)
-#     json_obj_get_recipe=urllib.request.urlopen(final_url_get_recipe).read()
-#     data_get_recipe = json.loads(json_obj_get_recipe.decode('utf-8'))
-#     print(data_get_recipe['recipe']['title'])
-    #print(data_get_recipe['recipe']['ingredients'])
-    #print(data_get_recipe['recipe']['source_url'])  
+    final_url_get_recipe = url_get_recipe + '&rId=' + ListId[rank]
+    print(final_url_get_recipe)
+    json_obj_get_recipe=urllib.request.urlopen(final_url_get_recipe).read()
+    data_get_recipe = json.loads(json_obj_get_recipe.decode('utf-8'))
+    print(data_get_recipe['recipe']['title'])
+    print(data_get_recipe['recipe']['ingredients'])
+    print(data_get_recipe['recipe']['source_url'])  
     
-# f2f_search_getrecipe('chicken,potato',0)
-# f2f_search_getrecipe('pesto pasta', 0)
+f2f_search_getrecipe('chicken,potato',0)
+f2f_search_getrecipe('pesto pasta', 0)
 print(f2f_search_getrecipe('', 0)[0][0],f2f_search_getrecipe('', 0)[1][0])

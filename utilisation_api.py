@@ -18,7 +18,7 @@ def f2f_search_getrecipe(query,rank):
     
     data_search = json.loads(json_obj_search.decode('utf-8'))
     
-    #print(data_search['count'])
+
     for item in data_search['recipes']:
         ListId= ListId + [item['recipe_id']]
         #print(item['title'])
