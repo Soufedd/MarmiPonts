@@ -12,8 +12,9 @@ urlpatterns = [
 	url(r'^search/$', 'Core.views.search', name='search'),
 	url(r'^personalinfo/$','Core.views.personalinfo', name='personalinfo'),
 	url(r'^ingredients/$','Core.views.ingredients', name='ingredients'),
+	url(r'^suggest/$','Core.views.suggest', name='suggest'),
 
-	url(r'^forum/$', 'forum.views.forum_dir'),
+	url(r'^forum/$', 'forum.views.forum_dir', name='forum'),
     url(r'^forum/(?P<forum_id>\d+)/$', 'forum.views.thread_dir'),
     url(r'^thread/(?P<thread_id>\d+)/$', 'forum.views.post_dir'),
 	

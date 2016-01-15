@@ -5,11 +5,14 @@ from django.template import RequestContext
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def forum_dir(request):
     forum_list = Forum.objects.all()
     return render(request, "forum.html", {'forum_list' : forum_list})
 
+@login_required
 def thread_dir(request, forum_id):
     thread_list = Thread.objects.filter( forum = forum_id )
     forum_info = Forum.objects.get( id = forum_id )
@@ -28,7 +31,7 @@ def thread_dir(request, forum_id):
                                'forum_info' : forum_info,
                                'form': form} )
                               
-
+@login_required
 def post_dir(request, thread_id):
     thread_info = Thread.objects.get(pk=thread_id)
     post_list = Post.objects.filter( thread = thread_id )   

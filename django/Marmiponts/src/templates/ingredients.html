@@ -1,1 +1,47 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+		<form action="" method="post">
+			<div class='row'>
+				<div class='col-sm-6 col-sm-offset-3'>
+					<h2 class='text-align-center'> Ingredient List </h2>
+			<br>
+		    {% csrf_token %}
+		    {{ form|crispy}}
+		    <input class= 'btn btn-primary btn-block' type="submit" value="Add Ingredient" name="add_ingr" />
+
+		    </div>
+		</form>
+
+{% if ingred_list %}
+		<div class='row'>
+			<div class='col-sm-4 col-sm-offset-4'>
+					<table class='table'>
+						<br /> <p class='lead text-align-center'>{{text_limit}}</p><br />
+							{%if len_ingr > 0 %}<tr><td class='text-align-center'>{{ingred_list.0.ingredient}}</td><td class='text-align-center'> <input class= 'btn btn-danger btn-block' type="submit" value="Delete" name='delete0' /><td></tr>
+							{%if len_ingr > 1 %}<tr><td class='text-align-center'>{{ingred_list.1.ingredient}}</td><td class='text-align-center'> <input class= 'btn btn-danger btn-block' type="submit" value="Delete" name='delete1' /><td></tr>
+							{%if len_ingr > 2 %}<tr><td class='text-align-center'>{{ingred_list.2.ingredient}}</td><td class='text-align-center'> <input class= 'btn btn-danger btn-block' type="submit" value="Delete" name='delete2' /><td></tr>
+							{%if len_ingr > 3 %}<tr><td class='text-align-center'>{{ingred_list.3.ingredient}}</td><td class='text-align-center'> <input class= 'btn btn-danger btn-block' type="submit" value="Delete" name='delete3' /><td></tr>
+							{%if len_ingr > 4 %}<tr><td class='text-align-center'>{{ingred_list.4.ingredient}}</td><td class='text-align-center'> <input class= 'btn btn-danger btn-block' type="submit" value="Delete" name='delete4' /><td></tr>
+							{%if len_ingr > 5 %}<tr><td class='text-align-center'>{{ingred_list.5.ingredient}}</td><td class='text-align-center'> <input class= 'btn btn-danger btn-block' type="submit" value="Delete" name='delete5' /><td></tr>
+							{%if len_ingr > 6 %}<tr><td class='text-align-center'>{{ingred_list.6.ingredient}}</td><td class='text-align-center'> <input class= 'btn btn-danger btn-block' type="submit" value="Delete" name='delete6' /><td></tr>
+							{%if len_ingr > 7 %}<tr><td class='text-align-center'>{{ingred_list.7.ingredient}}</td><td class='text-align-center'> <input class= 'btn btn-danger btn-block' type="submit" value="Delete" name='delete7' /><td></tr>
+							{%if len_ingr > 8 %}<tr><td class='text-align-center'>{{ingred_list.8.ingredient}}</td><td class='text-align-center'> <input class= 'btn btn-danger btn-block' type="submit" value="Delete" name='delete8' /><td></tr>
+							{%if len_ingr > 9 %}<tr><td class='text-align-center'>{{ingred_list.9.ingredient}}</td><td class='text-align-center'> <input class= 'btn btn-danger btn-block' type="submit" value="Delete" name='delete9' /><td></tr>
+							{%endif%}
+							{%endif%}
+							{%endif%}
+							{%endif%}
+							{%endif%}
+							{%endif%}
+							{%endif%}
+							{%endif%}
+							{%endif%}
+							{%endif%}
+
+					</table>
+			</div>
+		</div>
+{% endif %}
+{% endblock %}

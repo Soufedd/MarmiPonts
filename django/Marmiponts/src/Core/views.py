@@ -1,20 +1,26 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
-from Core.models import Information
-from Core.forms import SearchField, InformationForm
+from Core.models import Information, Ingredient
+from Core.forms import SearchField, InformationForm, IngredientField
 import urllib.request
 import json
 from django.contrib.auth.models import User
 
 @login_required
 def dashboard(request):
+	context={}
 	Information_list = Information.objects.filter(user=request.user)
-	Text_Info= "You did not edited your Personal Data! Do it ASAP to enjoy MarmiPonts"
+	Ingredient_list = Ingredient.objects.filter(user=request.user)
+	Text_Info_Perso= "You did not edited your Personal Data! Do it ASAP to enjoy MarmiPonts"
+	Text_Info_Ingred= "You have nothing in your Ingredient list!"
 	if len(Information_list)>0:
-		context= {"info": Information_list[0],
-				"textinfo": ""}
+		context["info"]= Information_list[0]
 	else:
-		context={"textinfo":Text_Info}
+		context["textinfo_perso"]= Text_Info_Perso
+	if len(Ingredient_list)>0:
+		context["ingred"] = Ingredient_list
+	else:
+		context["textinfo_ingred"]=Text_Info_Ingred
 	return render(request, "dashboard.html",context)
 
 @login_required
@@ -24,7 +30,7 @@ def search(request):
 	count = 0
 	context = {"form": form,
 				"count": count}
-	if request.method == 'POST':
+	if request.POST.get('search'):
 		if form.is_valid():
 			search_recipe = form.cleaned_data.get("search_recipe")
 			if not search_recipe:
@@ -68,10 +74,56 @@ def search(request):
 
 @login_required
 def ingredients(request):
+	Ingredient_list = Ingredient.objects.filter(user=request.user)
+	text_limit = ""
+	if request.POST.get('add_ingr'):
+			form = IngredientField(request.POST, instance=Ingredient(user=request.user))
+			if form.is_valid():
+				ingredient = form.cleaned_data['ingredient']
+				form.save()
+			form=IngredientField()
 
-	context={
-
+	else:
+		form=IngredientField()
+	len_ingr = len(Ingredient_list)
+	if len_ingr>9:
+		form.fields['ingredient'].widget.attrs['readonly'] = True
+		text_limit= "You can only have 10 ingredients"
+	context={"form": form,
+	"text_limit": text_limit,
+	"len_ingr": len_ingr
 	}
+	if len_ingr>0:
+		context["ingred_list"] = Ingredient_list
+		if request.POST.get('delete0'):			
+			Ingredient_list[0].delete()
+	if len_ingr>1:
+		if request.POST.get('delete1'):			
+			Ingredient_list[1].delete()
+	if len_ingr>2:
+		if request.POST.get('delete2'):			
+			Ingredient_list[2].delete()
+	if len_ingr>3:
+		if request.POST.get('delete3'):			
+			Ingredient_list[3].delete()
+	if len_ingr>4:
+		if request.POST.get('delete4'):			
+			Ingredient_list[4].delete()
+	if len_ingr>5:
+		if request.POST.get('delete5'):			
+			Ingredient_list[5].delete()
+	if len_ingr>6:
+		if request.POST.get('delete6'):			
+			Ingredient_list[6].delete()
+	if len_ingr>7:
+		if request.POST.get('delete7'):			
+			Ingredient_list[7].delete()
+	if len_ingr>8:
+		if request.POST.get('delete8'):			
+			Ingredient_list[8].delete()
+	if len_ingr>9:
+		if request.POST.get('delete9'):			
+			Ingredient_list[9].delete()
 	return render(request, "ingredients.html",context)
 
 
@@ -79,7 +131,7 @@ def ingredients(request):
 def personalinfo(request):
 	Information_list = Information.objects.filter(user=request.user)
 	Text_Edit=''
-	if request.method == 'POST':  
+	if request.POST.get('edit'):  
 		form = InformationForm(request.POST, instance=Information(user=request.user)) 
 		if form.is_valid():
 			First_name = form.cleaned_data['First_name']
@@ -108,3 +160,12 @@ def personalinfo(request):
 	context={"form": form,
 			"textedit": Text_Edit}
 	return render(request, "personalinfo.html",context)
+
+@login_required
+def suggest(request):
+	User_Ingredient_List = Ingredient.objects.filter(user=request.user)
+	Others_Ingredient_List= Ingredient.objects.exclude(user=request.user)
+	context={
+
+	}
+	return render(request, "suggest.html",context)
