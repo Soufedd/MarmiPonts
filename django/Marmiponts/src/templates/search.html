@@ -21,13 +21,13 @@
   {% if search_recipe %}
   {% if count > 0 %}
     <h1> You searched for: {{ search_recipe }} </h1>
-    <br> <br>
+    <br>
     <div class="row">
-      <div class='col-xs-5'>
+      <div class='col-xs-6'>
       	<a href={{F2FURL1}}>
         <img src= {{ImgURL1}} class='img-responsive' /></a>
       </div>
-      <div class='col-xs-7'>
+      <div class='col-xs-5 col-offset-1'>
       	<h1> {{ Title1 }}  </h1>
         <h2> Ingredients: </h2>
         {% for ing in Ingr1 %}

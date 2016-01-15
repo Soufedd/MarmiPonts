@@ -1,1 +1,22 @@
 {% extends "base.html" %}
+
+{% block content %}
+<h1 class=' text-align-center'>  MarmiPonts Suggestion </h1>
+<br><br>
+<div class='row'>
+	<h3 class='text-align-center'> {{title}} </h3>
+</div>
+<br>
+<div class='row'>
+	<div class='col-sm-6 '>
+		<img src= {{image_url}} class='img-responsive' />
+	</div>
+	<div class='col-sm-6'>
+		<p class='lead'> Ingredients: </p>
+		{% for ingred in recipe_ingred%}
+		<p> {{ingred}} </p>
+		{% endfor %}
+		<p class='lead'> Directions: <a href={{source_url}} target="_blank"> Click Here ! </a> </p>
+	</div>
+</div>
+{% endblock %}

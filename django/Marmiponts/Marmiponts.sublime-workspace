@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"pr",
+				"print"
+			],
+			[
 				"len",
 				"len_ingr"
 			],
@@ -91,16 +95,24 @@
 			"file": "src/Core/views.py",
 			"settings":
 			{
-				"buffer_size": 5691,
+				"buffer_size": 5978,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/forum/views.py",
+			"file": "src/templates/ingredients.html",
 			"settings":
 			{
-				"buffer_size": 2249,
-				"line_ending": "Unix"
+				"buffer_size": 3045,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/search.html",
+			"settings":
+			{
+				"buffer_size": 4762,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -128,6 +140,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/forum/views.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Marmiponts/urls.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/ingredients.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Core/models.py",
@@ -146,7 +159,6 @@
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Personalinfo/Personalinfo/forms.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Try-Django-1.8-master/Try-Django-1.8-master/src/newsletter/views.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Try-Django-1.8-master/Try-Django-1.8-master/src/newsletter/models.py",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/forum/views.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/Marmiponts.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/forum/forms.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/home.html",
@@ -241,7 +253,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -249,20 +261,47 @@
 					"file": "src/Core/views.py",
 					"settings":
 					{
-						"buffer_size": 5691,
+						"buffer_size": 5978,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								58
+								4401,
+								4401
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2745.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/templates/ingredients.html",
+					"settings":
+					{
+						"buffer_size": 3045,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								520,
+								520
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -272,29 +311,29 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "src/forum/views.py",
+					"buffer": 2,
+					"file": "src/templates/search.html",
 					"settings":
 					{
-						"buffer_size": 2249,
+						"buffer_size": 4762,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								922,
-								922
+								583,
+								583
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 125.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

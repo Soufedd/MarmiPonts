@@ -5,6 +5,8 @@ from Core.forms import SearchField, InformationForm, IngredientField
 import urllib.request
 import json
 from django.contrib.auth.models import User
+import time
+import random
 
 @login_required
 def dashboard(request):
@@ -176,9 +178,59 @@ def personalinfo(request):
 
 @login_required
 def suggest(request):
+	f2f_api = 'e9e8a1b93cc2b48c60c0459bb0bc25b5'
 	User_Ingredient_List = Ingredient.objects.filter(user=request.user)
 	Others_Ingredient_List= Ingredient.objects.exclude(user=request.user)
-	context={
 
+	U_Ingredient_List=[]
+	for i in range(len(User_Ingredient_List)):
+		U_Ingredient_List[len(U_Ingredient_List):]=[User_Ingredient_List[i].ingredient]
+
+	O_Ingredient_List=[]
+	for i in range(len(Others_Ingredient_List)):
+		O_Ingredient_List[len(O_Ingredient_List):]=[Others_Ingredient_List[i].ingredient]
+
+	url_search='http://food2fork.com/api/search?key=' + f2f_api
+	ListId=[]
+	ingredient_string = ','.join(U_Ingredient_List)
+	ingredient_string_url = ','.join(U_Ingredient_List).replace(' ', '+').replace(',',"%2C")
+	final_url_search = url_search + '&q=' + ingredient_string_url
+	print(final_url_search)
+	json_obj_search=urllib.request.urlopen(final_url_search).read()
+	data_search = json.loads(json_obj_search.decode('utf-8'))
+	count = data_search['count']
+
+	ingredient_liste = ingredient_string.split(',')
+	print(ingredient_liste)
+	while count == 0 :
+		del ingredient_liste[random.randint(0,len(ingredient_liste)-1)]
+		print(",".join(ingredient_liste))
+		ingredient_string_url = ','.join(ingredient_liste).replace(' ', '+').replace(',',"%2C")
+		final_url_search = url_search + '&q=' + ingredient_string_url
+		json_obj_search=urllib.request.urlopen(final_url_search).read()
+		data_search = json.loads(json_obj_search.decode('utf-8'))
+		count = data_search['count']
+
+	for item in data_search['recipes']:
+		ListId = ListId + [item['recipe_id']]
+	rand = int(time.clock())%count
+
+	url_get_recipe='http://food2fork.com/api/get?key=' + f2f_api + '&rId=' + str(ListId[rand])
+	json_obj_recipe=urllib.request.urlopen(url_get_recipe).read()
+	data_recipe = json.loads(json_obj_recipe.decode('utf-8'))
+	Title = data_recipe['recipe']['title']
+	Recipe_ingredients = data_recipe['recipe']['ingredients']
+	Source_url = data_recipe['recipe']['source_url']
+	Image_url = data_recipe['recipe']['image_url']
+ 	
+
+
+
+
+	context={"ingredient_list": "ingredient_list",
+			"title": Title,
+			"recipe_ingred": Recipe_ingredients,
+			"source_url": Source_url,
+			"image_url": Image_url 
 	}
 	return render(request, "suggest.html",context)
