@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"len",
+				"len_ingr"
+			],
+			[
+				"Ingr",
+				"Ingredient_list"
+			],
+			[
+				"list",
+				"list_range"
+			],
+			[
+				"Ingre",
+				"Ingredient_list"
+			],
+			[
+				"Ing",
+				"Ingredient_list"
+			],
+			[
+				"Text",
+				"Text_Info_Perso"
+			],
+			[
+				"In",
+				"Ingredient_list"
+			],
+			[
+				"Ingred",
+				"Ingredient_list"
+			],
+			[
 				"Inf",
 				"Information"
 			],
@@ -59,56 +91,16 @@
 			"file": "src/Core/views.py",
 			"settings":
 			{
-				"buffer_size": 3722,
+				"buffer_size": 5691,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Lib/site-packages/registration/models.py",
+			"file": "src/forum/views.py",
 			"settings":
 			{
-				"buffer_size": 11915,
+				"buffer_size": 2249,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Lib/site-packages/registration/tests/models.py",
-			"settings":
-			{
-				"buffer_size": 12301,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Lib/site-packages/django/contrib/auth/models.py",
-			"settings":
-			{
-				"buffer_size": 14879,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/templates/dashboard.html",
-			"settings":
-			{
-				"buffer_size": 1551,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Core/forms.py",
-			"settings":
-			{
-				"buffer_size": 345,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/templates/personalinfo.html",
-			"settings":
-			{
-				"buffer_size": 848,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -136,16 +128,24 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/personalinfo.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Marmiponts/urls.py",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/ingredients.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Core/models.py",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/thread.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/search.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/personalinfo.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Core/forms.py",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/suggest.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/dashboard.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/django/contrib/auth/models.py",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/tests/models.py",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/models.py",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Core/views.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Personalinfo/Personalinfo/views.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Personalinfo/Personalinfo/models.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Personalinfo/Personalinfo/forms.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Try-Django-1.8-master/Try-Django-1.8-master/src/newsletter/views.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Try-Django-1.8-master/Try-Django-1.8-master/src/newsletter/models.py",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/dashboard.html",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/search.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/forum/views.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/Marmiponts.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/forum/forms.py",
@@ -154,18 +154,13 @@
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/forum/models.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Try-Django-1.8-master/Try-Django-1.8-master/src/newsletter/forms.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Try-Django-1.8-master/Try-Django-1.8-master/src/templates/home.html",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/thread.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/post.html",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Marmiponts/urls.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/contact.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/forum.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/forms.py",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/models.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/backends/default/views.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/views.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Marmiponts.py",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Core/views.py",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/ingredients.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/personal-info",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/recipe.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Marmiponts/settings.py",
@@ -246,7 +241,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -254,15 +249,15 @@
 					"file": "src/Core/views.py",
 					"settings":
 					{
-						"buffer_size": 3722,
+						"buffer_size": 5691,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								520,
-								520
+								0,
+								58
 							]
 						],
 						"settings":
@@ -278,163 +273,28 @@
 				},
 				{
 					"buffer": 1,
-					"file": "Lib/site-packages/registration/models.py",
+					"file": "src/forum/views.py",
 					"settings":
 					{
-						"buffer_size": 11915,
+						"buffer_size": 2249,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6913,
-								6913
+								922,
+								922
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 309.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Lib/site-packages/registration/tests/models.py",
-					"settings":
-					{
-						"buffer_size": 12301,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4007.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Lib/site-packages/django/contrib/auth/models.py",
-					"settings":
-					{
-						"buffer_size": 14879,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6746,
-								6750
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/templates/dashboard.html",
-					"settings":
-					{
-						"buffer_size": 1551,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1195,
-								1195
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 192.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/Core/forms.py",
-					"settings":
-					{
-						"buffer_size": 345,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								272,
-								272
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/templates/personalinfo.html",
-					"settings":
-					{
-						"buffer_size": 848,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								662,
-								662
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 12.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -502,6 +362,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 221.0,
+	"side_bar_width": 235.0,
 	"status_bar_visible": true
 }

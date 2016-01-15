@@ -97,33 +97,46 @@ def ingredients(request):
 		context["ingred_list"] = Ingredient_list
 		if request.POST.get('delete0'):			
 			Ingredient_list[0].delete()
+			len_ingr-=1
 	if len_ingr>1:
 		if request.POST.get('delete1'):			
 			Ingredient_list[1].delete()
+			len_ingr-=1
 	if len_ingr>2:
 		if request.POST.get('delete2'):			
 			Ingredient_list[2].delete()
+			len_ingr-=1
 	if len_ingr>3:
 		if request.POST.get('delete3'):			
 			Ingredient_list[3].delete()
+			len_ingr-=1
 	if len_ingr>4:
 		if request.POST.get('delete4'):			
 			Ingredient_list[4].delete()
+			len_ingr-=1
 	if len_ingr>5:
 		if request.POST.get('delete5'):			
 			Ingredient_list[5].delete()
+			len_ingr-=1
 	if len_ingr>6:
 		if request.POST.get('delete6'):			
 			Ingredient_list[6].delete()
+			len_ingr-=1
 	if len_ingr>7:
 		if request.POST.get('delete7'):			
 			Ingredient_list[7].delete()
+			len_ingr-=1
 	if len_ingr>8:
 		if request.POST.get('delete8'):			
 			Ingredient_list[8].delete()
+			len_ingr-=1
 	if len_ingr>9:
 		if request.POST.get('delete9'):			
 			Ingredient_list[9].delete()
+			len_ingr-=1
+	context['len_ingr']= len_ingr
+	Ingredient_list = Ingredient.objects.filter(user=request.user)
+	context["ingred_list"] = Ingredient_list
 	return render(request, "ingredients.html",context)
 
 
