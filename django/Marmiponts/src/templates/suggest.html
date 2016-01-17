@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block head_title%} Suggestion | {{block.super}}{%endblock%}
 
 {% block content %}
 <h1 class=' text-align-center'>  MarmiPonts Suggestion </h1>
@@ -17,6 +18,37 @@
 		<p> {{ingred}} </p>
 		{% endfor %}
 		<p class='lead'> Directions: <a href={{source_url}} target="_blank"> Click Here ! </a> </p>
+	</div>
+</div>
+<br> <br>
+
+<div class = 'row'>
+	<div class='col-sm-4'>
+	<p class='text-align-center'> {{user1}} </p>
+	</div>
+	<div class='col-sm-4'>
+	<p class='text-align-center'> {{user2}} </p>
+	</div>
+	<div class='col-sm-4'>
+	<p class='text-align-center'> {{user3}} </p>
+	</div>
+</div>
+
+<div class = 'row'>
+	<div class='col-sm-4'>
+	{% for ingred in list_ingr1 %}
+	<p class='text-align-center'>{{ingred}}</p>
+	{% endfor %}
+	</div>
+	<div class='col-sm-4'>
+	{% for ingred in list_ingr2 %}
+	<p class='text-align-center'>{{ingred}}</p>
+	{% endfor %}
+	</div>
+	<div class='col-sm-4'>
+	{% for ingred in list_ingr3 %}
+	<p class='text-align-center'>{{ingred}}</p>
+	{% endfor %}
 	</div>
 </div>
 {% endblock %}

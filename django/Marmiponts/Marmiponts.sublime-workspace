@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"lis",
+				"list_o_users_ingred_organized"
+			],
+			[
+				"list_o_users",
+				"list_o_users_ingred_organized"
+			],
+			[
+				"U",
+				"U_Ingredient_List"
+			],
+			[
+				"in",
+				"ingredients"
+			],
+			[
+				"list_",
+				"list_o_users_ingred_organized"
+			],
+			[
+				"list",
+				"list_o_users_ingred_organized"
+			],
+			[
+				"Pers",
+				"Personal"
+			],
+			[
+				"O",
+				"O_Ingredient_List"
+			],
+			[
+				"ingre",
+				"ingredient_string"
+			],
+			[
+				"url",
+				"url_get_recipe"
+			],
+			[
+				"User",
+				"User_Ingredient_List"
+			],
+			[
+				"ingredien",
+				"ingredient_list"
+			],
+			[
 				"pr",
 				"print"
 			],
@@ -14,10 +62,6 @@
 			[
 				"Ingr",
 				"Ingredient_list"
-			],
-			[
-				"list",
-				"list_range"
 			],
 			[
 				"Ingre",
@@ -76,10 +120,6 @@
 				"background-color"
 			],
 			[
-				"url",
-				"urlpatterns"
-			],
-			[
 				"Sign",
 				"SignUpForm"
 			],
@@ -95,15 +135,23 @@
 			"file": "src/Core/views.py",
 			"settings":
 			{
-				"buffer_size": 5978,
+				"buffer_size": 9500,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Soufiane/Music/Future + MeloTechno/Marmiponts(1).py",
+			"settings":
+			{
+				"buffer_size": 2493,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "src/templates/ingredients.html",
 			"settings":
 			{
-				"buffer_size": 3045,
+				"buffer_size": 3110,
 				"line_ending": "Windows"
 			}
 		},
@@ -112,6 +160,62 @@
 			"settings":
 			{
 				"buffer_size": 4762,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/suggest.html",
+			"settings":
+			{
+				"buffer_size": 1286,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/dashboard.html",
+			"settings":
+			{
+				"buffer_size": 2711,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/about.html",
+			"settings":
+			{
+				"buffer_size": 400,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/forum.html",
+			"settings":
+			{
+				"buffer_size": 327,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/personalinfo.html",
+			"settings":
+			{
+				"buffer_size": 608,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/post.html",
+			"settings":
+			{
+				"buffer_size": 720,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/thread.html",
+			"settings":
+			{
+				"buffer_size": 863,
 				"line_ending": "Windows"
 			}
 		}
@@ -235,6 +339,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"liste",
 			"models"
 		],
 		"highlight": true,
@@ -253,7 +358,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -261,15 +366,15 @@
 					"file": "src/Core/views.py",
 					"settings":
 					{
-						"buffer_size": 5978,
+						"buffer_size": 9500,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4401,
-								4401
+								6329,
+								6329
 							]
 						],
 						"settings":
@@ -278,25 +383,53 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2745.0,
+						"translation.y": 4423.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/templates/ingredients.html",
+					"file": "/C/Users/Soufiane/Music/Future + MeloTechno/Marmiponts(1).py",
 					"settings":
 					{
-						"buffer_size": 3045,
+						"buffer_size": 2493,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								520,
-								520
+								1275,
+								1275
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 531.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/templates/ingredients.html",
+					"settings":
+					{
+						"buffer_size": 3110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								88,
+								88
 							]
 						],
 						"settings":
@@ -311,7 +444,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "src/templates/search.html",
 					"settings":
 					{
@@ -322,8 +455,8 @@
 						"selection":
 						[
 							[
-								583,
-								583
+								1012,
+								958
 							]
 						],
 						"settings":
@@ -333,7 +466,193 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 125.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/templates/suggest.html",
+					"settings":
+					{
+						"buffer_size": 1286,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								844,
+								844
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/templates/dashboard.html",
+					"settings":
+					{
+						"buffer_size": 2711,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								111
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/templates/about.html",
+					"settings":
+					{
+						"buffer_size": 400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								52,
+								52
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/templates/forum.html",
+					"settings":
+					{
+						"buffer_size": 327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								53,
+								53
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/templates/personalinfo.html",
+					"settings":
+					{
+						"buffer_size": 608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								89,
+								89
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/templates/post.html",
+					"settings":
+					{
+						"buffer_size": 720,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								81,
+								81
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/templates/thread.html",
+					"settings":
+					{
+						"buffer_size": 863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

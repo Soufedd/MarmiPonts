@@ -181,14 +181,45 @@ def suggest(request):
 	f2f_api = 'e9e8a1b93cc2b48c60c0459bb0bc25b5'
 	User_Ingredient_List = Ingredient.objects.filter(user=request.user)
 	Others_Ingredient_List= Ingredient.objects.exclude(user=request.user)
+	
+	list_o_users_ingred = [[],[]]
+	for i in range(len(Ingredient.objects.exclude(user=request.user).values('user'))):
+		list_o_users_ingred[0].append(Ingredient.objects.exclude(user=request.user).values('user')[i]['user'])
+		list_o_users_ingred[1].append(Ingredient.objects.exclude(user=request.user).values('ingredient')[i]['ingredient'])
+
+
+
+	list_o_users = list(set(list_o_users_ingred[0]))
+	list_o_users.sort()
+	print(list_o_users)
+
+	#namematchid
+
+	list_o_users_ingred_organized=[]
+	for i in list_o_users:
+		list_o_users_ingred_organized.append([i])
+		index = list_o_users_ingred_organized.index([i])
+		for j in range(len(Ingredient.objects.filter(user=i).values('ingredient'))):
+			list_o_users_ingred_organized[index].append(Ingredient.objects.filter(user=i).values('ingredient')[j]['ingredient'])
+
+	print(list_o_users_ingred_organized)
 
 	U_Ingredient_List=[]
 	for i in range(len(User_Ingredient_List)):
 		U_Ingredient_List[len(U_Ingredient_List):]=[User_Ingredient_List[i].ingredient]
+	Text_Partner = "No match"
 
-	O_Ingredient_List=[]
-	for i in range(len(Others_Ingredient_List)):
-		O_Ingredient_List[len(O_Ingredient_List):]=[Others_Ingredient_List[i].ingredient]
+	if len(list_o_users_ingred_organized)>0:	
+		U_Ingredient_List = U_Ingredient_List + list_o_users_ingred_organized[0][1:len(list_o_users_ingred_organized[0])]
+		if len(list_o_users_ingred_organized)>1:
+			U_Ingredient_List = U_Ingredient_List + list_o_users_ingred_organized[1][1:len(list_o_users_ingred_organized[1])]
+			if len(list_o_users_ingred_organized)>2:
+				U_Ingredient_List = U_Ingredient_List + list_o_users_ingred_organized[2][1:len(list_o_users_ingred_organized[2])]
+
+
+
+	print(U_Ingredient_List)
+
 
 	url_search='http://food2fork.com/api/search?key=' + f2f_api
 	ListId=[]
@@ -213,9 +244,9 @@ def suggest(request):
 
 	for item in data_search['recipes']:
 		ListId = ListId + [item['recipe_id']]
-	rand = int(time.clock())%count
+	rand_recipe = int(time.clock())%count
 
-	url_get_recipe='http://food2fork.com/api/get?key=' + f2f_api + '&rId=' + str(ListId[rand])
+	url_get_recipe='http://food2fork.com/api/get?key=' + f2f_api + '&rId=' + str(ListId[rand_recipe])
 	json_obj_recipe=urllib.request.urlopen(url_get_recipe).read()
 	data_recipe = json.loads(json_obj_recipe.decode('utf-8'))
 	Title = data_recipe['recipe']['title']
@@ -233,4 +264,8 @@ def suggest(request):
 			"source_url": Source_url,
 			"image_url": Image_url 
 	}
+	if len(list_o_users_ingred_organized)>0:
+		for i in range(len(list_o_users_ingred_organized)):
+			context['user'+str(i)]= list_o_users_ingred_organized[i][0]
+			context['list_ingr'+str(i)]= list_o_users_ingred_organized[i][1:len(list_o_users_ingred_organized[i])]
 	return render(request, "suggest.html",context)

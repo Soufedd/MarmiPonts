@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
+{% block head_title%} Post | {{block.super}}{%endblock%}
+
 
 {%block content%}
 <p><a href="/forum/"> Retour a la liste des forums </a> </p>
