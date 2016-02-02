@@ -135,95 +135,55 @@
 			"file": "src/Core/views.py",
 			"settings":
 			{
-				"buffer_size": 9502,
+				"buffer_size": 10276,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/Users/Soufiane/Music/Future + MeloTechno/Marmiponts(1).py",
+			"file": "src/Marmiponts/urls.py",
 			"settings":
 			{
-				"buffer_size": 2493,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/templates/ingredients.html",
-			"settings":
-			{
-				"buffer_size": 3110,
-				"line_ending": "Windows"
+				"buffer_size": 1216,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "src/templates/search.html",
 			"settings":
 			{
-				"buffer_size": 4652,
+				"buffer_size": 3154,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/templates/suggest.html",
+			"file": "src/templates/recipe.html",
 			"settings":
 			{
-				"buffer_size": 1085,
+				"buffer_size": 665,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/templates/dashboard.html",
+			"file": "Lib/site-packages/registration/backends/default/urls.py",
 			"settings":
 			{
-				"buffer_size": 2711,
-				"line_ending": "Windows"
+				"buffer_size": 2423,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/templates/about.html",
+			"file": "Lib/site-packages/registration/templates/registration/activation_email.html",
 			"settings":
 			{
-				"buffer_size": 400,
-				"line_ending": "Windows"
+				"buffer_size": 2226,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/templates/forum.html",
+			"file": "/C/Users/Soufiane/Documents/SGEF/TDLOG/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/templates/registration/activation_email.html",
 			"settings":
 			{
-				"buffer_size": 327,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/templates/personalinfo.html",
-			"settings":
-			{
-				"buffer_size": 608,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/templates/post.html",
-			"settings":
-			{
-				"buffer_size": 720,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/templates/thread.html",
-			"settings":
-			{
-				"buffer_size": 863,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Home/views.py",
-			"settings":
-			{
-				"buffer_size": 1793,
+				"buffer_size": 2226,
 				"line_ending": "Unix"
 			}
 		}
@@ -252,20 +212,29 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Soufiane/Downloads/pièces jointes(1)/views.py",
+		"/C/Users/Soufiane/Downloads/pièces jointes(1)/urls.py",
+		"/C/Users/Soufiane/Downloads/pièces jointes(1)/search.html",
+		"/C/Users/Soufiane/Downloads/pièces jointes(1)/recipe.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Home/views.py",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/thread.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/post.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/personalinfo.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/forum.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/about.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/dashboard.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/suggest.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/search.html",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/ingredients.html",
+		"/C/Users/Soufiane/Music/Future + MeloTechno/Marmiponts(1).py",
+		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Core/views.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/forum/views.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Marmiponts/urls.py",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/ingredients.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Core/models.py",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/thread.html",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/search.html",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/personalinfo.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Core/forms.py",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/suggest.html",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/dashboard.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/django/contrib/auth/models.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/tests/models.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/models.py",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Core/views.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Personalinfo/Personalinfo/views.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Personalinfo/Personalinfo/models.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Personalinfo/Personalinfo/forms.py",
@@ -274,13 +243,10 @@
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/Marmiponts.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/forum/forms.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/home.html",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/Home/views.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/forum/models.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Try-Django-1.8-master/Try-Django-1.8-master/src/newsletter/forms.py",
 		"/C/Users/Soufiane/Music/Future + MeloTechno/Try-Django-1.8-master/Try-Django-1.8-master/src/templates/home.html",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/post.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/contact.html",
-		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/src/templates/forum.html",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/forms.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/backends/default/views.py",
 		"/C/Users/Soufiane/Documents/GitHub/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/views.py",
@@ -366,7 +332,6 @@
 	"groups":
 	[
 		{
-			"selected": 10,
 			"sheets":
 			[
 				{
@@ -374,15 +339,15 @@
 					"file": "src/Core/views.py",
 					"settings":
 					{
-						"buffer_size": 9502,
+						"buffer_size": 10276,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7375,
-								7375
+								6356,
+								6356
 							]
 						],
 						"settings":
@@ -398,52 +363,23 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/C/Users/Soufiane/Music/Future + MeloTechno/Marmiponts(1).py",
+					"file": "src/Marmiponts/urls.py",
 					"settings":
 					{
-						"buffer_size": 2493,
+						"buffer_size": 1216,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1275,
-								1275
+								746,
+								746
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 531.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/templates/ingredients.html",
-					"settings":
-					{
-						"buffer_size": 3110,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								88,
-								88
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -452,19 +388,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "src/templates/search.html",
 					"settings":
 					{
-						"buffer_size": 4652,
+						"buffer_size": 3154,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4303,
-								4303
+								872,
+								872
 							]
 						],
 						"settings":
@@ -474,176 +410,45 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2486.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/templates/recipe.html",
+					"settings":
+					{
+						"buffer_size": 665,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								579,
+								579
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "src/templates/suggest.html",
+					"file": "Lib/site-packages/registration/backends/default/urls.py",
 					"settings":
 					{
-						"buffer_size": 1085,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1063,
-								1063
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/templates/dashboard.html",
-					"settings":
-					{
-						"buffer_size": 2711,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								49,
-								111
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/templates/about.html",
-					"settings":
-					{
-						"buffer_size": 400,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								52,
-								52
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/templates/forum.html",
-					"settings":
-					{
-						"buffer_size": 327,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								53,
-								53
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/templates/personalinfo.html",
-					"settings":
-					{
-						"buffer_size": 608,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								89,
-								89
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/templates/post.html",
-					"settings":
-					{
-						"buffer_size": 720,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								81,
-								81
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/templates/thread.html",
-					"settings":
-					{
-						"buffer_size": 863,
+						"buffer_size": 2423,
 						"regions":
 						{
 						},
@@ -656,8 +461,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -666,28 +472,57 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "src/Home/views.py",
+					"buffer": 5,
+					"file": "Lib/site-packages/registration/templates/registration/activation_email.html",
 					"settings":
 					{
-						"buffer_size": 1793,
+						"buffer_size": 2226,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								276,
-								276
+								15,
+								15
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 359.0,
+						"translation.y": 1080.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/Soufiane/Documents/SGEF/TDLOG/MarmiPonts/django/Marmiponts/Lib/site-packages/registration/templates/registration/activation_email.html",
+					"settings":
+					{
+						"buffer_size": 2226,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16,
+								16
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -1,5 +1,5 @@
 from django.db import models
-
+from Core.models import Information
 from django.forms import ModelForm
 
 
@@ -11,6 +11,7 @@ class Forum(models.Model):
         return self.title
 
 class Thread(models.Model):
+    id_name= models.ForeignKey(Information)
     forum = models.ForeignKey(Forum)
     title = models.CharField(max_length=60)
     content = models.TextField(max_length=10000)    

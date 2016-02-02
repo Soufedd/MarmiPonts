@@ -1,31 +1,51 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
-{% block head_title%} Post | {{block.super}}{%endblock%}
-
-
 {%block content%}
-<p><a href="/forum/"> Retour a la liste des forums </a> </p>
+<!-- <p><a href="/forum/"> Retour a la liste des forums </a> </p> thread_info.forum.id -->
 
 <p><a href="/forum/{{ thread_info.forum.id }}"> Retour a la liste des threads </a> </p>
 
 <p><h1>Thread : {{ thread_info.title }} </h1></p>
 
-<p>{{ thread_info.content }}
-{{ thread_info.pub_date }}
-</p>
+<div class="row">
 
-{% if post_list %}
-{% for POST in post_list %}
-        <p>{{ POST.content }} {{ POST.pub_date }} </p>
-    {% endfor %}
-{% else %}
-    <p>Aucune reponse</p>
-{% endif %}
+	<div class="col-xs-6">
+		
 
-<form action="/thread/{{ thread_info.id }}/" method="post">
-{% csrf_token %}
-{{ form|crispy }}
-<input type="submit" value="Submit" />
-</form>
+		<form action="/thread/{{ thread_info.id }}/" method="post">
+		{% csrf_token %}
+		{{ form|crispy }}
+		<input type="submit" value="Submit" />
+		</form>
+
+	</div>
+	<div class="col-xs-6">
+	  
+			
+	  	<p class="bg-primary">
+			<div class="container-fluid">
+	  			<div class="row">
+
+				</p>
+				<p>{{ thread_info.content }}
+				{{ thread_info.pub_date }}
+				</p>
+
+				{% if post_list %}
+				{% for POST in post_list %}
+				        <p>{{ POST.content }} {{ POST.pub_date }} </p>
+				    {% endfor %}
+				{% else %}
+				    <p>Aucune reponse</p>
+				{% endif %}
+			</div>
+			</div>
+			
+			
+	</div>
+	
+</div>
 
 {%endblock%}
+
+
