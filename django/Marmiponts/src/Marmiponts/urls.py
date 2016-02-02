@@ -10,6 +10,7 @@ urlpatterns = [
 
 	url(r'^dashboard/$', 'Core.views.dashboard', name='dashboard'),
 	url(r'^search/$', 'Core.views.search', name='search'),
+	url(r'^recipe/(?P<recipe_id>\d+)/$', 'Core.views.recipe',name='recipe'),
 	url(r'^personalinfo/$','Core.views.personalinfo', name='personalinfo'),
 	url(r'^ingredients/$','Core.views.ingredients', name='ingredients'),
 	url(r'^suggest/$','Core.views.suggest', name='suggest'),

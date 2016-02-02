@@ -135,7 +135,7 @@
 			"file": "src/Core/views.py",
 			"settings":
 			{
-				"buffer_size": 9500,
+				"buffer_size": 9502,
 				"line_ending": "Unix"
 			}
 		},
@@ -159,7 +159,7 @@
 			"file": "src/templates/search.html",
 			"settings":
 			{
-				"buffer_size": 4762,
+				"buffer_size": 4652,
 				"line_ending": "Windows"
 			}
 		},
@@ -167,7 +167,7 @@
 			"file": "src/templates/suggest.html",
 			"settings":
 			{
-				"buffer_size": 1286,
+				"buffer_size": 1085,
 				"line_ending": "Windows"
 			}
 		},
@@ -217,6 +217,14 @@
 			{
 				"buffer_size": 863,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Home/views.py",
+			"settings":
+			{
+				"buffer_size": 1793,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -358,7 +366,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 10,
 			"sheets":
 			[
 				{
@@ -366,15 +374,15 @@
 					"file": "src/Core/views.py",
 					"settings":
 					{
-						"buffer_size": 9500,
+						"buffer_size": 9502,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6329,
-								6329
+								7375,
+								7375
 							]
 						],
 						"settings":
@@ -383,7 +391,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4423.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -448,15 +456,15 @@
 					"file": "src/templates/search.html",
 					"settings":
 					{
-						"buffer_size": 4762,
+						"buffer_size": 4652,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1012,
-								958
+								4303,
+								4303
 							]
 						],
 						"settings":
@@ -466,7 +474,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2486.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -476,15 +484,15 @@
 					"file": "src/templates/suggest.html",
 					"settings":
 					{
-						"buffer_size": 1286,
+						"buffer_size": 1085,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								844,
-								844
+								1063,
+								1063
 							]
 						],
 						"settings":
@@ -653,6 +661,33 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/Home/views.py",
+					"settings":
+					{
+						"buffer_size": 1793,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								276,
+								276
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 359.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

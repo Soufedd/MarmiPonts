@@ -25,6 +25,7 @@ def dashboard(request):
 		context["textinfo_ingred"]=Text_Info_Ingred
 	return render(request, "dashboard.html",context)
 
+
 @login_required
 def search(request): 
 	form = SearchField(request.POST or None)
@@ -45,7 +46,6 @@ def search(request):
 			ListId=[]
 			ListIngr=[]
 			url_search='http://food2fork.com/api/search?key=' + f2f_api
-			url_get_recipe='http://food2fork.com/api/get?key=' + f2f_api
 			final_url_search = url_search + '&q=' + search_query
 			json_obj_search=urllib.request.urlopen(final_url_search).read()
 			data_search = json.loads(json_obj_search.decode('utf-8'))
@@ -56,23 +56,34 @@ def search(request):
 				ListF2FURL= ListF2FURL + [item['f2f_url']]
 				ListSrcURL= ListSrcURL + [item['source_url']]
 				ListId= ListId + [item['recipe_id']]
-			for ID in ListId:
-				final_url_get_recipe = url_get_recipe + '&rId=' + ID  
-				json_obj_get_recipe=urllib.request.urlopen(final_url_get_recipe).read()
-				data_get_recipe = json.loads(json_obj_get_recipe.decode('utf-8'))
-				ListIngr= ListIngr + [data_get_recipe['recipe']['ingredients']]
 			context = {"search_recipe": search_recipe,
-						"count": count}
+ 						"count": count} 
 			for i in range(min(8,count)):
 				context["Title"+str(i+1)]=ListTitles[i]
 				context["ImgURL"+str(i+1)]=ListImgURL[i]
 				context["F2FURL"+str(i+1)]=ListF2FURL[i]
-				context["Ingr"+str(i+1)]=ListIngr[i]
+				context["Id"+str(i+1)]=ListId[i]
 				context["SrcURL"+str(i+1)]=ListSrcURL[i]
 
 	return render(request, "search.html", context)
 
 
+@login_required
+def recipe(request,recipe_id):
+	f2f_api = 'e9e8a1b93cc2b48c60c0459bb0bc25b5'
+
+	url_get_recipe='http://food2fork.com/api/get?key=' + f2f_api
+
+	final_url_get_recipe = url_get_recipe + '&rId=' + recipe_id  
+	json_obj_get_recipe=urllib.request.urlopen(final_url_get_recipe).read()
+	data_get_recipe = json.loads(json_obj_get_recipe.decode('utf-8'))
+	Ingr = data_get_recipe['recipe']['ingredients']
+	Title = data_get_recipe['recipe']['title']
+	ImgURL = data_get_recipe['recipe']['image_url']
+	SrcURL = data_get_recipe['recipe']['source_url']
+	context = {"Ingr": Ingr, "Title":Title, "ImgURL":ImgURL, "SrcURL":SrcURL}
+
+	return render(request, "recipe.html", context)
 
 @login_required
 def ingredients(request):
@@ -178,7 +189,7 @@ def personalinfo(request):
 
 @login_required
 def suggest(request):
-	f2f_api = 'e9e8a1b93cc2b48c60c0459bb0bc25b5'
+	f2f_api = '3bfb06fc13de32b982be4c417aa05826'
 	User_Ingredient_List = Ingredient.objects.filter(user=request.user)
 	Others_Ingredient_List= Ingredient.objects.exclude(user=request.user)
 	
@@ -192,13 +203,16 @@ def suggest(request):
 	list_o_users = list(set(list_o_users_ingred[0]))
 	list_o_users.sort()
 	print(list_o_users)
+	list_users_info=[[],[]]
 
-	#namematchid
 
 	list_o_users_ingred_organized=[]
 	for i in list_o_users:
 		list_o_users_ingred_organized.append([i])
 		index = list_o_users_ingred_organized.index([i])
+		list_o_users_ingred_organized[index].append(Information.objects.filter(user=i).values('First_name')[0]['First_name'])
+		list_o_users_ingred_organized[index].append(Information.objects.filter(user=i).values('Room_number')[0]['Room_number'])
+		list_o_users_ingred_organized[index].append(Information.objects.filter(user=i).values('Telephone_number')[0]['Telephone_number'])
 		for j in range(len(Ingredient.objects.filter(user=i).values('ingredient'))):
 			list_o_users_ingred_organized[index].append(Ingredient.objects.filter(user=i).values('ingredient')[j]['ingredient'])
 
@@ -210,12 +224,11 @@ def suggest(request):
 	Text_Partner = "No match"
 
 	if len(list_o_users_ingred_organized)>0:	
-		U_Ingredient_List = U_Ingredient_List + list_o_users_ingred_organized[0][1:len(list_o_users_ingred_organized[0])]
+		Text_Partner = ""
+		U_Ingredient_List = U_Ingredient_List + list_o_users_ingred_organized[0][4:len(list_o_users_ingred_organized[0])]
 		if len(list_o_users_ingred_organized)>1:
-			U_Ingredient_List = U_Ingredient_List + list_o_users_ingred_organized[1][1:len(list_o_users_ingred_organized[1])]
-			if len(list_o_users_ingred_organized)>2:
-				U_Ingredient_List = U_Ingredient_List + list_o_users_ingred_organized[2][1:len(list_o_users_ingred_organized[2])]
-
+			U_Ingredient_List = U_Ingredient_List + list_o_users_ingred_organized[1][4:len(list_o_users_ingred_organized[1])]
+		
 
 
 	print(U_Ingredient_List)
@@ -262,10 +275,14 @@ def suggest(request):
 			"title": Title,
 			"recipe_ingred": Recipe_ingredients,
 			"source_url": Source_url,
-			"image_url": Image_url 
+			"image_url": Image_url,
+			"match": Text_Partner
 	}
 	if len(list_o_users_ingred_organized)>0:
 		for i in range(len(list_o_users_ingred_organized)):
 			context['user'+str(i)]= list_o_users_ingred_organized[i][0]
-			context['list_ingr'+str(i)]= list_o_users_ingred_organized[i][1:len(list_o_users_ingred_organized[i])]
+			context['name'+str(i)]= list_o_users_ingred_organized[i][1]
+			context['room'+str(i)]= list_o_users_ingred_organized[i][2]
+			context['cell'+str(i)]= list_o_users_ingred_organized[i][3]
+			context['list_ingr'+str(i)]= list_o_users_ingred_organized[i][4:len(list_o_users_ingred_organized[i])]
 	return render(request, "suggest.html",context)

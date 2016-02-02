@@ -1,2 +1,27 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block head_title%}  {{ Title }} | {{block.super}}{%endblock%}
+
+{%block content%}
+
+
+    <br> <br>
+    <div class="row">
+        <div class='col-xs-6'>
+            <h1> {{ Title }}  </h1>
+            <br> <br>
+            <img src= {{ImgURL}} class='img-responsive' />
+            <br> <br>
+            <h2> Directions: <a href={{SrcURL}} target="_blank"> Click Here ! </a></h2>
+        </div>
+        <div class='col-xs-5 col-offset-1'>
+            <h2> Ingredients: </h2>
+            {% for ing in Ingr %}
+            <p > {{ing}}  </p>
+            {% endfor %}
+        </div>
+    </div>
+   
+{%endblock%}
+
 
